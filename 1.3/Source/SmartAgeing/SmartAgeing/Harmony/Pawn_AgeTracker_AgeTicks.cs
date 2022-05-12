@@ -4,7 +4,7 @@ using Verse;
 using System.Collections.Generic;
 using System.Linq;
 using System;
-using System.Reflection.Emit;
+using System.Reflection;
 
 
 
@@ -14,33 +14,40 @@ namespace SmartAgeing
 
     [HarmonyPatch(typeof(Pawn_AgeTracker))]
     [HarmonyPatch("AgeTick")]
-    public static class SmartAgeing_Pawn_AgeTracker_AgeTick_Patch
+    public static class SmartAgeing_Pawn_AgeTracker_AgeTick_Postfix
     {
-        static IEnumerable<CodeInstruction> Transpiler(IEnumerable<CodeInstruction> instructions)
+
+        [HarmonyPostfix]
+        static void DoBirthdays(Pawn_AgeTracker __instance)
         {
-
-
-            var codes = instructions.ToList();
-         
-            for (var i = 0; i < codes.Count; i++)
+            if (Find.TickManager.TicksGame % (3600000/SmartAgeing_Settings.ageingRate) == 0)
             {
-                
-
-                if (codes[i].opcode == OpCodes.Ldc_I4 && (int)(codes[i].operand) == 3600000)
-                {
-                   
-                    yield return new CodeInstruction(OpCodes.Ldc_I4,360);
-                }
-                
-                else
-                {
-                    yield return codes[i];
-                }
+                MethodInfo birthday = AccessTools.Method(typeof(Pawn_AgeTracker), "BirthdayBiological");
+                birthday.Invoke(__instance, null);
 
 
             }
 
 
+
         }
+    }
+
+
+    [HarmonyPatch(typeof(Pawn_AgeTracker))]
+    [HarmonyPatch("AgeTick")]
+    public static class SmartAgeing_Pawn_AgeTracker_AgeTick_Prefix
+    {
+        [HarmonyPrefix]
+        static void AgeTickIncrease(ref long ___ageBiologicalTicksInt, ref long ___birthAbsTicksInt)
+        {
+            ___ageBiologicalTicksInt += SmartAgeing_Settings.ageingRate - 1;
+            ___birthAbsTicksInt -= (SmartAgeing_Settings.ageingRate - 1);
+
+          
+
+        }
+
+       
     }
 }

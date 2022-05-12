@@ -19,6 +19,5 @@
 	</modDependencies>
 	
 	<packageId>sarg.smartageing</packageId>
-	<description>
-	</description>
+	<description>A very simple, very VERY lightweight mod that allows you to set the ageing rate of all pawns in the world between 1 and 1000.</description>
 </ModMetaData>

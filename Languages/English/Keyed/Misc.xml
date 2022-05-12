@@ -3,7 +3,9 @@
 	
 	
 	<!-- Mod options -->
-	
+	<SA_ageingRate>Ageing rate:</SA_ageingRate>
+	<SA_ageingRateTooltip>Set ageing rate. All pawns in the world will age at this increased rate. Bear in mind this just means their age will increase and they will get "birthday" health conditions faster, but the game doesn't kill pawns that get old. You'll need another mod for that.</SA_ageingRateTooltip>
+	<SA_Reset>Reset</SA_Reset>
 	
 
 </LanguageData>

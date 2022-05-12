@@ -296,6 +296,9 @@
   <ItemGroup>
     <Compile Include="Harmony\HarmonyInstance.cs" />
     <Compile Include="Harmony\Pawn_AgeTracker_AgeTicks.cs" />
+    <Compile Include="Options\SettingsHelper.cs" />
+    <Compile Include="Options\SmartAgeing_Settings.cs" />
+    <Compile Include="Options\SmartAgeing_SettingsController.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup />

@@ -18,8 +18,9 @@ namespace SmartAgeing
         public const int baseAgeingRate = 1;
         public const int maxAgeingRate = 1000;
 
+        public static bool affectAnimals = true;
 
-       
+
 
 
 
@@ -27,7 +28,8 @@ namespace SmartAgeing
         {
             base.ExposeData();
             Scribe_Values.Look(ref ageingRate, "ageingRate", baseAgeingRate, true);
-          
+            Scribe_Values.Look(ref affectAnimals, "affectAnimals", true, true);
+
 
 
 
@@ -39,6 +41,7 @@ namespace SmartAgeing
 
 
             ls2.Begin(inRect);
+            ls2.CheckboxLabeled("SA_affectAnimals".Translate(), ref affectAnimals, "SA_affectAnimalsTooltip".Translate());
 
             var ageingRateLabel = ls2.LabelPlusButton("SA_ageingRate".Translate() + ": " + ageingRate, "SA_ageingRateTooltip".Translate());
             ageingRate = (int)Math.Round(ls2.Slider(ageingRate, baseAgeingRate, maxAgeingRate), 0);

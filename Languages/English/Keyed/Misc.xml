@@ -4,10 +4,14 @@
 	
 	<!-- Mod options -->
 	<SA_ageingRate>Ageing rate:</SA_ageingRate>
-	<SA_ageingRateTooltip>Set ageing rate. All pawns in the world will age at this increased rate. Bear in mind this just means their age will increase and they will get "birthday" health conditions faster, but the game doesn't kill pawns that get old. You'll need another mod for that.</SA_ageingRateTooltip>
+	<SA_ageingRateTooltip>Set ageing rate. All non-animal pawns in the world will age at this increased rate. Bear in mind this just means their age will increase and they will get "birthday" health conditions faster, but the game doesn't kill pawns that get old. You'll need another mod for that.</SA_ageingRateTooltip>
 	<SA_Reset>Reset</SA_Reset>
 	<SA_affectAnimals>Affect animals</SA_affectAnimals>
 	<SA_affectAnimalsTooltip>By default, the accelerated ageing will affect animals, which WON'T affect their lifestage changes (this may be changed in the future if it is needed)</SA_affectAnimalsTooltip>
+	<SA_applyOldAgeDiseases>Apply "birthday" diseases</SA_applyOldAgeDiseases>
+	<SA_applyOldAgeDiseasesTooltip>Applies old age diseases every time the pawn gets 1 year older. You may disable this in case you are playing with amother mod that also adds such a mechanic</SA_applyOldAgeDiseasesTooltip>
+	<SA_animalAgeingRate>Animal ageing rate:</SA_animalAgeingRate>
+	<SA_animalAgeingRateTooltip>Set animal ageing rate. All animals in the world will age at this increased rate. Bear in mind this just means their age will increase and they will get "birthday" health conditions faster, but the game doesn't kill pawns that get old. You'll need another mod for that.</SA_animalAgeingRateTooltip>
 	
 
 </LanguageData>

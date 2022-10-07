@@ -1,0 +1,10 @@
+{
+  "version": 2,
+  "dgSpecHash": "CjBQ5CXuwLbeJg74tRhBI4kF61Waew8isPQwx8AGEtXv6UHcvxfUdhx51baPK+U2dyArHQS9WOFr2D97Et0a0Q==",
+  "success": true,
+  "projectFilePath": "C:\\Program Files (x86)\\Steam\\steamapps\\common\\RimWorld\\Mods\\Smart-Ageing\\1.4\\Source\\SmartAgeing\\SmartAgeing\\SmartAgeing.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\Sarg\\.nuget\\packages\\lib.harmony\\2.1.1\\lib.harmony.2.1.1.nupkg.sha512"
+  ],
+  "logs": []
+}
